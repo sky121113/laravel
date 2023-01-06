@@ -99,4 +99,7 @@ Route::get('/redelete',function(){
     // }
 });
 
-Route::get('/first', [FirstCon::class, 'index']);
+Route::get('/first/{id}', FirstCon::class);
+
+Route::post('/first/{id}', [ FirstCon::class, 'store']);
+
